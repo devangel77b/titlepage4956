@@ -12,7 +12,8 @@
 \newcommand{\thecoverpicture}{\includegraphics[width=0.75\columnwidth]{RCE-logo-01.png}}
 \newcommand{\coverpicture}[1]{\renewcommand{\thecoverpicture}{#1}}
 
-\newcommand{\maketitlepage}{
+\newcommand{\makecoverpage}{
+\thispagestyle{empty}
 \begin{figure*}[p]
 \makeatletter
 \begin{center}
@@ -46,6 +47,8 @@ Signature & Date \\
 \end{tabular}
 \end{center}
 \end{table*}
-\clearpage
+\cleardoublepage
+\setcounter{page}{1}
 \makeatother
 }
+\newcommand{\maketitlepage}{\makecoverpage}
